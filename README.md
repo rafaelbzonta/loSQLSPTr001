@@ -5,7 +5,7 @@
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE?logo=powershell&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-Pipeline de automação para importação diária de dados do **Print Tracker** no **SQL Server Express**, com instância dedicada, deduplicação automática, log de execução mensal e suporte a consultas externas.
+Automação para importação diária de dados do **Print Tracker** no **SQL Server Express**, com instância dedicada, deduplicação automática, log de execução mensal e suporte a consultas externas.
 
 ---
 
@@ -28,9 +28,9 @@ Pipeline de automação para importação diária de dados do **Print Tracker** 
 ## Visão Geral
 
 
-O **Print Tracker** exporta diariamente um arquivo `001.csv` contendo todas as impressoras que ficaram offline por mais de 72 horas. O CSV tem 11 colunas: `Entity`, `Make`, `Model`, `Serial Number`, `Asset ID`, `IP Address`, `Mac Address`, `Created`, `Check-in`, `Offline` e `Link`.
+O **Print Tracker** exporta diariamente alguns relatórios e um deles contem todas as impressoras que ficaram offline por mais de 72 horas (Podendo ser ajustado). O CSV tem 11 colunas: `Entity`, `Make`, `Model`, `Serial Number`, `Asset ID`, `IP Address`, `Mac Address`, `Created`, `Check-in`, `Offline` e `Link`.
 
-Este pipeline automatiza o ciclo completo: recebe o CSV, importa os dados para o SQL Server, elimina duplicatas e disponibiliza tudo para consultas e dashboards externos — sem intervenção manual.
+Este pipeline automatiza o ciclo completo: Recebe o CSV, importa os dados para o SQL Server, elimina duplicatas e disponibiliza tudo para consultas e dashboards externos — sem intervenção manual.
 
 ---
 
@@ -100,7 +100,7 @@ loSQLSPTr001/
 ---
 
 
-## Scripts SQL — O que cada um faz
+## Scripts SQL
 
 ### `01_create_database.sql`
 Cria o banco `loSQLSPTr001` do zero na instância `loSQLS`.
@@ -171,7 +171,7 @@ Cria o login `user001` na instância `loSQLS` com `SELECT` exclusivo em `dbo.Off
 ---
 
 
-## Scripts PowerShell — O que cada um faz
+## Scripts PowerShell
 
 ### `Import-PrintTracker.ps1`
 
