@@ -33,7 +33,6 @@ GO
 
 SELECT COUNT(*) AS LinhasCarregadasNaStaging
 FROM #Staging;
-GO
 
 -- Remove registros cujo SerialNumber não existe mais no CSV. Impressoras que voltaram online deixam de aparecer na exportação do Print Tracker e devem sair do banco.
 DELETE FROM dbo.OfflinePrinters
