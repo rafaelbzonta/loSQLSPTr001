@@ -5,7 +5,7 @@
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE?logo=powershell&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-Automação para importação diária de dados do **Print Tracker** no **SQL Server Express**, com instância dedicada, deduplicação automática, log de execução mensal e suporte a consultas externas.
+Automação para importação diária de dados do **Print Tracker** no **SQL Server Express**.
 
 ---
 
